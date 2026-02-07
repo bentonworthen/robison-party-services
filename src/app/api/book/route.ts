@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     // Send notification email to Amber
     const result = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'worthenbenton@gmail.com',
+      to: 'robisonfamily03@gmail.com',
       replyTo: email,
       subject: `🎯 New Booking Request from ${name}`,
       html: `
