@@ -57,12 +57,12 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
               <span className="text-2xl">🎯</span>
             </div>
             <span className="font-bold text-xl">Robison Party Services</span>
-          </div>
+          </a>
           <nav className="hidden md:flex gap-6">
             <a href="#services" className="hover:text-primary transition-colors">Services</a>
             <a href="#how-it-works" className="hover:text-primary transition-colors">How It Works</a>
@@ -347,12 +347,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
+              <a href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
                   <span className="text-lg">🎯</span>
                 </div>
                 <span className="font-bold text-lg">Robison Party Services</span>
-              </div>
+              </a>
               <p className="text-background/70">
                 Making parties epic with Nerf battles across the Wasatch Front.
               </p>
