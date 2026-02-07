@@ -26,11 +26,30 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // TODO: Send to backend/email
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setSubmitted(true);
-    setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          date: date?.toLocaleDateString('en-US', { 
+            weekday: 'long', 
+            month: 'long', 
+            day: 'numeric',
+            year: 'numeric'
+          }),
+        }),
+      });
+      
+      if (!response.ok) throw new Error('Failed to submit');
+      
+      setSubmitted(true);
+    } catch (error) {
+      alert('Something went wrong. Please try again or call us directly!');
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
