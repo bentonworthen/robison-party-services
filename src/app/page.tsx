@@ -370,8 +370,8 @@ export default function Home() {
               <ul className="space-y-2 text-background/70">
                 <li>Salt Lake City to Provo, UT</li>
                 <li>
-                  <a href="mailto:hello@robisonparty.com" className="hover:text-primary transition-colors">
-                    hello@robisonparty.com
+                  <a href="mailto:robisonfam03@gmail.com" className="hover:text-primary transition-colors">
+                    robisonfam03@gmail.com
                   </a>
                 </li>
               </ul>
